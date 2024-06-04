@@ -63,6 +63,8 @@ const AnotherDailyWord: FC = () => {
     } else {
       setCurrentSentenceNumber(currentSentenceNumber - 1);
     }
+
+    setIsClicked(false);
   };
 
   const onClickNext = () => {
@@ -71,6 +73,8 @@ const AnotherDailyWord: FC = () => {
     } else {
       setCurrentSentenceNumber(currentSentenceNumber + 1);
     }
+
+    setIsClicked(false);
   };
 
   useEffect(() => {
@@ -112,8 +116,10 @@ const AnotherDailyWord: FC = () => {
       <Flex mt={8} flexDirection="column" px={4}>
         <Text>{state.wordData.sentences[currentSentenceNumber]?.english}</Text>
         <Text
-          bgColor={isClicked ? "" : "black"}
+          bgColor={isClicked ? "gray.100" : "black"}
+          color={"black"}
           mt={2}
+          px={2}
           cursor="pointer"
           onClick={() => setIsClicked(!isClicked)}
         >
@@ -122,7 +128,7 @@ const AnotherDailyWord: FC = () => {
         <Flex mt={2} gap={2}>
           <Button
             variant="ghost"
-            colorScheme="green"
+            colorScheme="blue"
             size="sm"
             mb={2}
             ml={2}
@@ -132,7 +138,7 @@ const AnotherDailyWord: FC = () => {
           </Button>
           <Button
             variant="ghost"
-            colorScheme="green"
+            colorScheme="blue"
             size="sm"
             mb={2}
             ml={2}
@@ -142,7 +148,7 @@ const AnotherDailyWord: FC = () => {
           </Button>
           <Button
             variant="ghost"
-            colorScheme="green"
+            colorScheme="blue"
             size="sm"
             mb={2}
             ml={2}
