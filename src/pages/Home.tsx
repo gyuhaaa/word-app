@@ -11,26 +11,6 @@ const Home: FC = () => {
       <Text fontSize={48} fontWeight={"bold"} textAlign={"center"} mt={8}>
         Word App
       </Text>
-      <Flex flexDir="column" mt={8} gap={4} px={4}>
-        {sampleData.map((v: IWords) => (
-          <Button
-            key={v.day}
-            variant={"outline"}
-            colorScheme="green"
-            justifyContent={"start"}
-            isTruncated={true}
-            onClick={() =>
-              navigate(`/daily-word/${v.day}`, {
-                state: {
-                  wordData: v,
-                },
-              })
-            }
-          >
-            <Text fontWeight={"bold"}>Day {v.day}</Text> - {v.title}
-          </Button>
-        ))}
-      </Flex>
       <Flex flexDir="column" mt={16} gap={4} px={4}>
         {sampleData.map((v: IWords) => (
           <Button
