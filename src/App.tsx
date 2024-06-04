@@ -1,4 +1,3 @@
-import { Flex } from "@chakra-ui/react";
 import { FC } from "react";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import DailyWord from "./pages/DailyWord";
